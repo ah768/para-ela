@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Surpresa ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* PARTE 1 */
+#parte1 {
+  height: 100vh;
+  background: linear-gradient(180deg, #ffb6c1, #ff69b4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+  background: #ff1493;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.coracao {
+  position: absolute;
+  bottom: -50px;
+  font-size: 24px;
+  animation: subir 6s infinite;
+}
+
+@keyframes subir {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* PARTE 2 */
+#parte2 {
+  display: none;
+  min-height: 100vh;
+  background: #ffb6c1;
+  padding: 30px;
+  text-align: center;
+}
+
+#parte2 h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.galeria {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#final {
+  margin-top: 25px;
+  font-size: 24px;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PARTE 1 -->
+<div id="parte1">
+  <button onclick="mostrar()">Surpresa</button>
+
+  <div class="coracao" style="left:10%">❤️</div>
+  <div class="coracao" style="left:30%">💖</div>
+  <div class="coracao" style="left:50%">❤️</div>
+  <div class="coracao" style="left:70%">💖</div>
+  <div class="coracao" style="left:90%">❤️</div>
+</div>
+
+<!-- PARTE 2 -->
+<div id="parte2">
+  <h2>Obrigado por tudo meu amor, esses foram os momentos mais especiais para mim</h2>
+
+  <div class="galeria">
+    <img src="imagens/57776b00-bdc7-4635-8355-a00fa0683900.jfif">
+    <img src="imagens/foto2.jfif">
+    <img src="imagens/foto3.jfif">
+    <img src="imagens/foto4.jfif">
+  </div>
+
+  <div id="final">Eu te amo muito minha princesa ❤️</div>
+</div>
+
+<script>
+function mostrar() {
+  document.getElementById("parte1").style.display = "none";
+  document.getElementById("parte2").style.display = "block";
+}
+</script>
+
+</body>
+</html>
